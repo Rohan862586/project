@@ -18,8 +18,8 @@ const TableData = (props:any) => {
 
   // console.log(contact)
   const ccc = (id:any) => {
-    // dispatch(deletes(id))
-    //  deleting(id)
+    dispatch(deletes(id))
+     deleting(id)
   }
 
   return (
@@ -32,24 +32,15 @@ const TableData = (props:any) => {
     // <td>Delete</td>
     // </tr>
 
-    // <tr>
-    // <td>{id}</td>
-    // <td>{name}</td>
-    // <td>{address}</td>
-    // <td>{mobile}</td>
-    // <td>Edit</td>
-    // <td> <a onClick={() => {ccc(id)}}>Delete </a></td>
-    // </tr>
-
-
     <tr>
-    <td>{val.id}</td>
-    <td>{val.name}</td>
-    <td>{val.address}</td>
-    <td>{val.mobile}</td>
+    <td>{id}</td>
+    <td>{name}</td>
+    <td>{address}</td>
+    <td>{mobile}</td>
     <td>Edit</td>
     <td> <a onClick={() => {ccc(id)}}>Delete </a></td>
     </tr>
+
 
 
 
