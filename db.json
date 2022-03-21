@@ -1,0 +1,16 @@
+{
+  "customer": [
+    {
+      "id": 3,
+      "name": "infinity",
+      "address": "usa",
+      "mobile": 8624598713
+    },
+    {
+      "id": 5,
+      "name": "infinity",
+      "address": "usa",
+      "mobile": 8624598713
+    }
+  ]
+}
