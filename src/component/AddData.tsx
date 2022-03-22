@@ -13,6 +13,8 @@ const AddData = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    useSelector((state:any) => state.allvalues.add)
+
     const initialValues ={
         name:'',
         address:'',
@@ -25,8 +27,8 @@ const AddData = () => {
         mobile: yup.string().required('please enter mobile')
     })
 
-    const onSubmit = (data:any) => {
-      addVal(data)
+    const onSubmit = async(data:any) => {
+      await addVal(data)
       dispatch(add(data))
       navigate('/')
     }

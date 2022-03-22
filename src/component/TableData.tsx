@@ -45,7 +45,8 @@ const TableData = (props:any) => {
     <td>{name}</td>
     <td>{address}</td>
     <td>{mobile}</td>
-    <td><a onClick={() => {ddd(props.data)}}><Link to="/update">Edit</Link></a></td>
+    {/* <td><a onClick={() => {ddd(props.data)}}><Link to="/update">Edit</Link></a></td> */}
+    <td><Link to="/update" onClick={() => {ddd(props.data)} } >Edit</Link></td>
     {/* <td><a onClick={() => {ddd(props.data)}}>Edit</a></td> */}
     <td> <a onClick={() => {ccc(id)}}>Delete</a></td>
     </tr>
