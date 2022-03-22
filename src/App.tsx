@@ -1,13 +1,22 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Table from './component/Table';
+import { allRouter } from './router/allRouter'
+import { Routes ,Route, BrowserRouter } from 'react-router-dom';
 
 function App() {
-  console.log(process.env.REACT_APP_API)
+  // console.log(process.env.REACT_APP_API)
   return (
     <div>
-      <Table/>
+      <BrowserRouter>
+        <Routes>
+          {
+            allRouter.map( ( {path,element},key) => (
+            <Route path={path} element={element} key={key} />
+            ))
+          }
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
@@ -31,7 +40,7 @@ export default App;
 //         <div className='new'>
 //           <img src="images/logo.png"/>
 //           <button style={{marginLeft:'60%',height:'40px'}} className='btn btn-secondary btn-sm'>Login</button>
-//           <button style={{marginLeft:'30px',height:'40px'}} className='btn btn-primary btn-sm'>join</button>
+//           <button style={{marginLeft:'30px',height:'40px'}} className='btn btn-prippmary btn-sm'>join</button>
 //         </div>
 //         <div className='one'>
 //           <h5>Booking Confirmation</h5>

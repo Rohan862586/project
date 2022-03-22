@@ -1,22 +1,22 @@
 
 import React from 'react'
+import { Navigate } from 'react-router';
 import { useContactsQuery } from '../api/api'
 import TableData from './TableData';
-import { useDispatch, useSelector } from 'react-redux'
-import { add } from '../reducer/reducerSlice';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Table = () => {
+
+    const navigate = useNavigate()
     const { data, error, isLoading, isSuccess} = useContactsQuery();
-    const dispatch = useDispatch()
-      
-    dispatch(add(data))
-
-    const  val = useSelector((state:any)=>state.allvalues.add)
-
 
   return (
     <div>
+
+        <button type="button" className="btn btn-primary" onClick={() => { navigate('/add')} }> Add Data </button>
+
         {isLoading && <h2>...........Loading</h2>}
         {error && <h2>something went wrong</h2>}
         {isSuccess && (
@@ -24,12 +24,13 @@ const Table = () => {
                     <table className="table">
                     <thead>
                         <tr>
-                            <th>id</th>
-                            <th>name</th>
-                            <th>address</th>
-                            <th>mobile</th>
+                            <th scope="col">id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">address</th>
+                            <th scope="col">mobile</th>
                             <th>Edit</th>
                             <th>Delete</th>
+                            <th>images</th>
                         </tr>
                     </thead>
                     <tbody>

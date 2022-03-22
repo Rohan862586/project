@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     add:'',
-    deletes:''
+    deletes:'',
+    edit:''
 }
 
 export const reducerSlice = createSlice({
@@ -16,11 +17,16 @@ export const reducerSlice = createSlice({
 
         deletes: (state,action) => {
             state.deletes = action.payload
+        },
+
+        edit: (state,action) =>{
+            state.edit = action.payload
         }
+        
     }
 })
 
 
-export const { add, deletes } = reducerSlice.actions
+export const { add, deletes, edit } = reducerSlice.actions
 
 export default reducerSlice.reducer

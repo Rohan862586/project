@@ -1,25 +1,33 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useDeleteContactMutation } from '../api/api'
-import { deletes } from '../reducer/reducerSlice'
+import { deletes, edit } from '../reducer/reducerSlice'
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router'
+
 
 const TableData = (props:any) => {
+
+  // const navigate = useNavigate();
+
   const dispatch = useDispatch()
   const {id,name,address,mobile} = props.data
 
   const [ deleting ] = useDeleteContactMutation();
   const  val = useSelector((state:any)=>state.allvalues.add)
 
-  console.log(val)
+  // console.log(val)
   // deleting(deleteselect)
-
-
   // const contact = useSelector((store:any)=>store.allvalues.deletes)
 
-  // console.log(contact)
   const ccc = (id:any) => {
     dispatch(deletes(id))
      deleting(id)
+  }
+
+  const ddd = (data:any) => {
+    dispatch(edit(data))
+    // navigate('/update')
   }
 
   return (
@@ -37,14 +45,14 @@ const TableData = (props:any) => {
     <td>{name}</td>
     <td>{address}</td>
     <td>{mobile}</td>
-    <td>Edit</td>
-    <td> <a onClick={() => {ccc(id)}}>Delete </a></td>
+    <td><a onClick={() => {ddd(props.data)}}><Link to="/update">Edit</Link></a></td>
+    {/* <td><a onClick={() => {ddd(props.data)}}>Edit</a></td> */}
+    <td> <a onClick={() => {ccc(id)}}>Delete</a></td>
     </tr>
-
-
-
 
   )
 }
 
+
 export default TableData
+
