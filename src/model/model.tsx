@@ -1,9 +1,9 @@
 
 
-export interface data {
-    "id": number,
-    "name": string,
-    "address": string,
-    "mobile": number
+export interface Data {
+    id?: number;
+    name?: string;
+    address?: string;
+    mobile?: number;
 }
 

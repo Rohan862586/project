@@ -1,34 +1,34 @@
 
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import {data} from '../model/model'
+import {Data} from '../model/model'
 
 export const newApi = createApi({
   reducerPath: "newApi",
   baseQuery: fetchBaseQuery({baseUrl: process.env.REACT_APP_API}),
-  tagTypes: ['data'],
+  tagTypes: ['Data'],
   endpoints: (builder) => ({
 
-    contacts: builder.query<data[], void> ({
+    contacts: builder.query<Data[], void> ({
       query: () => '/customer',
-      providesTags: ['data']
+      providesTags: ['Data']
     }),
 
-    addContact: builder.mutation<void, data> ({
+    addContact: builder.mutation<void, Data> ({
       query: val => ({
         url: '/customer',
         method: 'POST',
         body: val
       }),
-      invalidatesTags: ['data']
+      invalidatesTags: ['Data']
     }),
 
-    updateContact: builder.mutation<void, data>({
+    updateContact: builder.mutation<void, Data>({
       query: ({id, ...rest}) => ({
         url: `/customer/${id}`,
         method: 'PUT',
         body: rest
       }),
-      invalidatesTags: ['data']
+      invalidatesTags: ['Data']
     }),
 
     deleteContact: builder.mutation<void, string> ({
@@ -36,7 +36,7 @@ export const newApi = createApi({
         url: `/customer/${id}`,
         method: 'DELETE'
       }),
-      invalidatesTags: ['data']
+      invalidatesTags: ['Data']
     })
 
   })

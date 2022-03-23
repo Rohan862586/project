@@ -1,29 +1,99 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import React from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import './App.css';
+// import { allRouter } from './router/allRouter'
+// import { Routes ,Route, BrowserRouter } from 'react-router-dom';
+
+// function App() {
+//   // console.log(process.env.REACT_APP_API)
+//   return (
+//     <div>
+//       <BrowserRouter>
+//         <Routes>
+//           {
+//             allRouter.map( ( {path,element},key) => (
+//             <Route path={path} element={element} key={key} />
+//             ))
+//           }
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+// import React from 'react';
+// import './App.css';
+// import CourseInput from './component/courseInput';
+
+// function App() {
+//   const addGoalHandler = (course:any) => {
+//     console.log(course)
+//   }
+
+//   return (
+//     <div>
+//       <CourseInput onAdd={addGoalHandler}/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+// import React from 'react';
+// import './App.css';
+// import CourseInput from './component/courseInput';
+
+// function App() {
+
+//   const newVal = (col:any) => {
+//     console.log(col)
+//   }
+
+//   return (
+//     <div>
+//       <CourseInput newVal={newVal}/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+import React, { useState } from 'react';
 import './App.css';
-import { allRouter } from './router/allRouter'
-import { Routes ,Route, BrowserRouter } from 'react-router-dom';
+import CourseInput from './component/courseInput';
 
 function App() {
-  // console.log(process.env.REACT_APP_API)
+
+  const [val, setVal] = useState('rohan')
+
+  const valGive = (giv:any) => {
+    console.log(giv)
+  }
+
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          {
-            allRouter.map( ( {path,element},key) => (
-            <Route path={path} element={element} key={key} />
-            ))
-          }
-        </Routes>
-      </BrowserRouter>
+      <CourseInput setVal={setVal} val={val} valGive={valGive} />
     </div>
   );
 }
 
 export default App;
-
-
 
 
 
@@ -221,7 +291,6 @@ export default App;
 // }
 
 // export default App;
-
 
 
 
