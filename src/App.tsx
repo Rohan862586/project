@@ -74,26 +74,26 @@
 
 
 
-import React, { useState } from 'react';
-import './App.css';
-import CourseInput from './component/courseInput';
+// import React, { useState } from 'react';
+// import './App.css';
+// import CourseInput from './component/courseInput';
 
-function App() {
+// function App() {
 
-  const [val, setVal] = useState('rohan')
+//   const [val, setVal] = useState('rohan')
 
-  const valGive = (giv:any) => {
-    console.log(giv)
-  }
+//   const valGive = (giv:any) => {
+//     console.log(giv)
+//   }
 
-  return (
-    <div>
-      <CourseInput setVal={setVal} val={val} valGive={valGive} />
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <CourseInput setVal={setVal} val={val} valGive={valGive} />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 
@@ -294,4 +294,32 @@ export default App;
 
 
 
+
+
+
+
+import React, { useState } from 'react';
+import './App.css';
+import UserList from './component/UserList';
+import User from './component/User';
+
+
+function App() {
+  
+  const [val, setVal] = useState<any[]>([]);
+
+  const alldata = (username:any,password:any) => {
+    setVal([...val,{username:username, password: password}])
+    }
+
+  return(
+    <div>
+      <User alldata={alldata}/>
+      <UserList val={val} />
+
+    </div>
+  )
+}
+
+export default App;
 
