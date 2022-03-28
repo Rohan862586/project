@@ -323,3 +323,60 @@ function App() {
 
 export default App;
 
+
+
+
+
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import './App.css';
+// import User from './component/user';
+// import UserList from './component/UserList';
+
+
+// function App() {
+  
+//   const [val, setVal] = useState<any[]>([]);
+
+  
+//   // useEffect(() => {
+//   //   console.log('rohan')
+//   // },[])
+
+   
+//   // useEffect(() => {
+//   //   console.log('rohan')
+//   // },[val])
+
+  
+//   // useEffect(() => {
+//   //   console.log('rohan')
+//   //   setTimeout(()=>{console.log('odel')},2000)
+//   // },[])
+  
+
+//   const alldata = (username:any,password:any) => {
+//     setVal([...val,{username:username, password: password}])
+//     }
+
+//   return(
+//     <div>
+//       <User alldata={alldata}/>
+//       <UserList val={val} />
+
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
