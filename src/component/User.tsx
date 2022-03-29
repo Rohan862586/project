@@ -27,7 +27,7 @@ const User = (props:any) => {
               <form onSubmit={handleAction}>
               <label htmlFor='username' >username</label>
               <input type='text' name='username' value={username} onChange={usernamefun} />
-              <label htmlFor='age'>age</label>
+              <label htmlFor='password'>age</label>
               <input type='text' name='password' value={password} onChange={useragefun} />
               <button>click me</button>
               </form>

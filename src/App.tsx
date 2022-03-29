@@ -296,19 +296,32 @@
 
 
 
-
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import User from './component/user';
 import UserList from './component/UserList';
-import User from './component/User';
-import ProtalDemo from './component/ProtalDemo';
-import RefProgram from './component/RefProgram';
-// import NewReducer from './component/NewReducer';
+
 
 function App() {
   
   const [val, setVal] = useState<any[]>([]);
+
+  
+  // useEffect(() => {
+  //   console.log('rohan')
+  // },[])
+
+   
+  // useEffect(() => {
+  //   console.log('rohan')
+  // },[val])
+
+  
+  // useEffect(() => {
+  //   console.log('rohan')
+  //   setTimeout(()=>{console.log('odel')},2000)
+  // },[])
+  
 
   const alldata = (username:any,password:any) => {
     setVal([...val,{username:username, password: password}])
@@ -318,12 +331,7 @@ function App() {
     <div>
       <User alldata={alldata}/>
       <UserList val={val} />
-      <ProtalDemo/>
-      <RefProgram/>
- 
-      {/* <NewReducer/> */}
 
-       
     </div>
   )
 }
@@ -338,32 +346,17 @@ export default App;
 
 
 
-// import React, { useEffect, useState } from 'react';
+// import React, { useState } from 'react';
 // import './App.css';
-// import User from './component/user';
 // import UserList from './component/UserList';
-
+// import User from './component/User';
+// import ProtalDemo from './component/ProtalDemo';
+// import RefProgram from './component/RefProgram';
+// // import NewReducer from './component/NewReducer';
 
 // function App() {
   
 //   const [val, setVal] = useState<any[]>([]);
-
-  
-//   // useEffect(() => {
-//   //   console.log('rohan')
-//   // },[])
-
-   
-//   // useEffect(() => {
-//   //   console.log('rohan')
-//   // },[val])
-
-  
-//   // useEffect(() => {
-//   //   console.log('rohan')
-//   //   setTimeout(()=>{console.log('odel')},2000)
-//   // },[])
-  
 
 //   const alldata = (username:any,password:any) => {
 //     setVal([...val,{username:username, password: password}])
@@ -373,17 +366,17 @@ export default App;
 //     <div>
 //       <User alldata={alldata}/>
 //       <UserList val={val} />
+//       <ProtalDemo/>
+//       <RefProgram/>
+ 
+//       {/* <NewReducer/> */}
 
+       
 //     </div>
 //   )
 // }
 
 // export default App;
-
-
-
-
-
 
 
 
