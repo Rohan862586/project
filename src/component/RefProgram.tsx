@@ -16,22 +16,26 @@ const RefProgram = () => {
 
     const submitVal = (e:any) => {
         e.preventDefault();
-        console.log(inputUser.current.value)
-        console.log(inputAge.current.value)
+        // console.log(inputUser.current.value)
+        // console.log(inputAge.current.value)
 
-        setUsername(inputUser.current.value)
-        setPassword(inputAge.current.value)
-        console.log('===user===>',username)
-        console.log('===pass===>',password)
+        const aaa= inputUser.current.value
+        const bbb= inputAge.current.value
 
-        setTimeout(()=>{console.log('U: ',username)},1000)
+        // setUsername(inputUser.current.value)
+        // setPassword(inputAge.current.value)
+        // console.log('===user===>',username)
+        // console.log('===pass===>',password)
 
-        setVal([...val,{username:username,password:password}])
-        console.log('===array===>',val)
+        // setTimeout(()=>{console.log('U: ',username)},1000)
+
+        // setVal([...val,{username:username,password:password}])
+        setVal([...val,{username:aaa,password:bbb}])
+
+        // console.log('===array===>',val)
 
 
     }
-
 
   return (
     <div>
