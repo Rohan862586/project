@@ -302,7 +302,9 @@ import React, { useState } from 'react';
 import './App.css';
 import UserList from './component/UserList';
 import User from './component/User';
-
+import ProtalDemo from './component/ProtalDemo';
+import RefProgram from './component/RefProgram';
+// import NewReducer from './component/NewReducer';
 
 function App() {
   
@@ -316,7 +318,12 @@ function App() {
     <div>
       <User alldata={alldata}/>
       <UserList val={val} />
+      <ProtalDemo/>
+      <RefProgram/>
+ 
+      {/* <NewReducer/> */}
 
+       
     </div>
   )
 }
