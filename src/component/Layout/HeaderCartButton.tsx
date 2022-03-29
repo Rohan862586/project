@@ -2,7 +2,7 @@ import React from 'react'
 import CartIcon from '../Cart/CartIcon'
 
 
-const HeaderCartButton = (props) => {
+const HeaderCartButton = () => {
   return (
     <div>
         <button>
