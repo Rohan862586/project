@@ -2,12 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Table from './component/Table';
+import Header from './component/Layout/Header';
 
 function App() {
   console.log(process.env.REACT_APP_API)
   return (
     <div>
-      <Table/>
+      {/* <Table/> */}
+      <Header/>
     </div>
   );
 }
