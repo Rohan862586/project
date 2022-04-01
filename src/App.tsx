@@ -23,13 +23,6 @@
 
 // export default App;
 
-
-
-
-
-
-
-
 // import React from 'react';
 // import './App.css';
 // import CourseInput from './component/courseInput';
@@ -47,9 +40,6 @@
 // }
 
 // export default App;
-
-
-
 
 // import React from 'react';
 // import './App.css';
@@ -69,10 +59,6 @@
 // }
 
 // export default App;
-
-
-
-
 
 // import React, { useState } from 'react';
 // import './App.css';
@@ -95,36 +81,27 @@
 
 // export default App;
 
-
-
-
-
-
 // import React, { useEffect, useState } from 'react';
 // import './App.css';
 // import UserList from './component/UserList';
 // import User from './component/User';
 
 // function App() {
-  
+
 //   const [val, setVal] = useState<any[]>([]);
 
-  
 //   // useEffect(() => {
 //   //   console.log('rohan')
 //   // },[])
 
-   
 //   // useEffect(() => {
 //   //   console.log('rohan')
 //   // },[val])
 
-  
 //   // useEffect(() => {
 //   //   console.log('rohan')
 //   //   setTimeout(()=>{console.log('odel')},2000)
 //   // },[])
-  
 
 //   const alldata = (username:any,password:any) => {
 //     setVal([...val,{username:username, password: password}])
@@ -141,14 +118,6 @@
 
 // export default App;
 
-
-
-
-
-
-
-
-
 // import React, { useState } from 'react';
 // import './App.css';
 // import UserList from './component/UserList';
@@ -158,7 +127,7 @@
 // // import NewReducer from './component/NewReducer';
 
 // function App() {
-  
+
 //   const [val, setVal] = useState<any[]>([]);
 
 //   const alldata = (username:any,password:any) => {
@@ -171,21 +140,14 @@
 //       <UserList val={val} />
 //       <ProtalDemo/>
 //       <RefProgram/>
- 
+
 //       {/* <NewReducer/> */}
 
-       
 //     </div>
 //   )
 // }
 
 // export default App;
-
-
-
-
-
-
 
 // import React, { useEffect, useState } from 'react';
 // import './App.css';
@@ -207,7 +169,6 @@
 //     console.log('rohan')
 //   },[val,temp])
 
-  
 //  return(
 //     <div>
 //       <button onClick={()=> {setVal(val+1)}}>click</button>
@@ -216,6 +177,7 @@
 //   )
 // }
 
+//export default App
 
 
 
@@ -253,9 +215,10 @@ export default App
 
 
 
+
+
 // import React, { useContext } from 'react';
 // import './App.css';
-
 
 // const themes ={
 //   light: {
@@ -269,7 +232,6 @@ export default App
 // }
 
 // const ThemeContext = React.createContext(themes.light);
-
 
 // function App() {
 
@@ -286,7 +248,7 @@ export default App
 //   return(
 //     <div>
 //       <Themebutton/>
-     
+
 //     </div>
 //   )
 // }
@@ -301,6 +263,8 @@ export default App
 // }
 
 // export default App
+
+
 
 
 
